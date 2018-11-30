@@ -1,0 +1,129 @@
+# 2<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    window.onload=function(){
+   var a= document.getElementById("img");  
+   var f= document.getElementById("fang");
+   var x= document.getElementById("xiao");
+   var z= document.getElementById("zuo");
+   var y= document.getElementById("you");
+   var s= document.getElementById("shang");
+   var xi= document.getElementById("xia");
+   var t=document.getElementById("top");
+if(a.style.width<="700px"){
+f.onclick = function(){
+var  width=parseInt(a.style.width)+200;
+var  height=parseInt(a.style.height)+200;
+var  c=setInterval(function(){
+ a.style.width=width+"px";
+ a.style.height=height+"px"; 
+     },10);
+};
+else{
+    clearInterval(c)
+}
+
+x.onclick = function(){
+var  width=parseInt(a.style.width)-100;
+var  height=parseInt(a.style.height)-100;
+if(a.style.width>"100px"){
+var  d=setInterval(function(){
+ a.style.width=width+"px";
+ a.style.height=height+"px"; 
+     },10);
+};
+else{
+    clearInterval(d)
+};
+z.onclick=function(){
+    var i=0;
+    var e=setInterval(function(){
+        i++;
+    if(i<=2){
+    var a1=parseInt(a.style.marginLeft)
+        a.style.marginLeft="100px"+a1+"px";
+     },10);
+     else{
+         clearInterval(e);
+     }
+    }
+}
+y.onclick=function(){
+    var i=0;
+    var e=setInterval(function(){
+        i++;
+    if(i<=2){
+    var a1=parseInt(a.style.marginLeft)
+        a.style.marginRight="100px"+a1+"px";
+     },10);
+     else{
+         clearInterval(e);
+     }
+    }
+}
+s.onclick=function(){
+    var i=0;
+    var e=setInterval(function(){
+        i++;
+    if(i<=2){
+    var a1=parseInt(a.style.marginLeft)
+        a.style.marginBottom="100px"+a1+"px";
+     },10);
+     else{
+         clearInterval(e);
+     }
+    }
+}
+xi.onclick=function(){
+    var i=0;
+    var e=setInterval(function(){
+        i++;
+    if(i<=2){
+    var a1=parseInt(a.style.marginLeft)
+        a.style.marginTop="100px"+a1+"px";
+     },10);
+     else{
+         clearInterval(e);
+     }
+    }
+}
+t.onclick=function(){
+    var f=setInterval(function(){
+    var m = document.body.scrollTop -20;
+    window.scrollTo(0,m);
+if(parseInt(m) < 60)
+{
+    window.scroll(0, 0);
+    clearInterval(f);
+}
+},10);
+}
+}
+</script>
+<style>
+#img{
+ width:300px;
+ height:300px;
+ display: block;
+ margin-left: 400px;
+ margin-top:400px;
+}
+</style>       
+<body>   
+  <div id="img" ><img  src="http://images.cnblogs.com/cnblogs_com/rubylouvre/199042/o_s015.jpg" width="100%" height="100%"></div>
+  <button id="fang" >fangda</button>
+  <button id="xiao" >suoxiao</button>
+  <button id="zuo">zuo</button>
+  <button id="you">you</button>
+  <button id="shang">shang</button>
+  <button id="xia">xia</button>
+  <button id="top">top</button>
+  </body>
+  </html>
+  
